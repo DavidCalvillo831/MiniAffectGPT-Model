@@ -37,3 +37,4 @@ if __name__ == "__main__":
     emo, intensity = predict("data/FER2013/images/img_0.jpg", "I feel great today!")
     print("Emotion:", emo)
     print("Intensity:", intensity)
+
