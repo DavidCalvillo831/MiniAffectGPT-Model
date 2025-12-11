@@ -1,0 +1,20 @@
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Model checkpoints (too large for GitHub)
+results/*.pth
+results/*.png
+
+# Large dataset files
+data/FER2013/
+archive/
+archive.zip
+
+# Keep CSV structure files but they might be large
+# Uncomment if CSVs are too big:
+# data/fer_train.csv
+# data/fer_val.csv
+# data/fer_test.csv
