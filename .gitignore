@@ -1,5 +1,4 @@
-
-# Python cache
+# Python
 __pycache__/
 *.pyc
 *.pyo
@@ -8,13 +7,15 @@ __pycache__/
 results/*.pth
 results/*.png
 
-# Large dataset files
-data/FER2013/
+# Large datasets (users download themselves)
+data/fer_train.csv
+data/fer_val.csv
+data/fer_test.csv
+data/ck_test.csv
 archive/
-archive.zip
+ckplus_data/
+ckplus_images/
 
-# Keep CSV structure files but they might be large
-# Uncomment if CSVs are too big:
-# data/fer_train.csv
-# data/fer_val.csv
-# data/fer_test.csv
+# OS
+.DS_Store
+.ipynb_checkpoints/
