@@ -4,26 +4,24 @@ import torch.nn.functional as F
 import math
 
 class AttentionFusionModel(nn.Module):
-    """
-    Cross-Modal Attention Fusion for Emotion Recognition
-    
-    This is your MAIN NOVELTY!
-    Image features act as Query, Text features provide Key/Value
-    """
     def __init__(self, img_dim=512, txt_dim=768, hidden=512, num_classes=7):
         super().__init__()
+        # Cross-modal attention mechanism
+        # image features will query the text features
+        # this lets the model decide which text info is most relevant for each image
         
-        # Cross-modal attention
         self.query_proj = nn.Linear(img_dim, hidden)
         self.key_proj = nn.Linear(txt_dim, hidden)
         self.value_proj = nn.Linear(txt_dim, hidden)
         
-        # Fusion
+        # Fusion network
+        # takes concatenated image + attended text features
         self.fusion_fc = nn.Linear(img_dim + hidden, hidden)
         self.dropout = nn.Dropout(0.3)
         self.relu = nn.ReLU()
         
-        # Output head - EMOTION ONLY (no intensity!)
+        # Output head
+        # we simplified to just emotion classification, not multi-task
         self.emotion_head = nn.Linear(hidden, num_classes)
     
     def forward(self, img_feat, txt_feat):
@@ -48,7 +46,7 @@ class AttentionFusionModel(nn.Module):
         x = self.relu(self.fusion_fc(fused))
         x = self.dropout(x)
         
-        # Only emotion classification (NO INTENSITY)
+        # Only emotion classification
         emotion_logits = self.emotion_head(x)
         
         return emotion_logits
