@@ -2,7 +2,7 @@
 
 **Cross-modal attention fusion with BLIP-generated captions for facial emotion recognition**
 
-ECE 4715 Final Project - Cal Poly Pomona, December 2024  
+ECE 4990 Final Project - Cal Poly Pomona, December 2025  
 Author: David Calvillo
 
 ## Results
