@@ -7,8 +7,13 @@ class ImageModel(nn.Module):
     """
     def __init__(self, pretrained=True):
         super().__init__()
+        #using RESNET18 architecture ***note for paper
         self.backbone = models.resnet18(pretrained=pretrained)
+         # remove final fc layer
         self.backbone.fc = nn.Identity()
 
     def forward(self, x):
+        # x shape: [batch, 3, 224, 224]
+        # output shape: [batch, 512]
         return self.backbone(x)
+
