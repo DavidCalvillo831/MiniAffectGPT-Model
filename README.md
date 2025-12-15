@@ -195,7 +195,7 @@ This demonstrates that training on challenging in-the-wild data (FER2013) yields
   author={Calvillo, David},
   year={2025},
   institution={California State Polytechnic University, Pomona},
-  course={ECE 4715 - Deep Learning for Computer Vision}
+  course={ECE 4990 - Deep Learning}
 }
 ```
 
@@ -206,7 +206,3 @@ This demonstrates that training on challenging in-the-wild data (FER2013) yields
 - BLIP model: Salesforce Research
 - ResNet: He et al.
 - DistilBERT: Sanh et al.
-
-## License
-
-This project is for educational purposes (ECE 4715 course project).
