@@ -190,10 +190,10 @@ This demonstrates that training on challenging in-the-wild data (FER2013) yields
 
 ## Citation
 ```bibtex
-@misc{calvillo2024miniaffectgpt,
+@misc{calvillo2025miniaffectgpt,
   title={MiniAffectGPT: Efficient Multimodal Emotion Recognition with Cross-Modal Attention},
   author={Calvillo, David},
-  year={2024},
+  year={2025},
   institution={California State Polytechnic University, Pomona},
   course={ECE 4715 - Deep Learning for Computer Vision}
 }
